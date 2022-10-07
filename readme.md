@@ -12,7 +12,6 @@
 
 <p align="center">
  <a href="#about">About</a> •
- <a href="#live-version">Live version</a> •
  <a href="#routes">Routes</a> • 
  <a href="#how-it-works">How it works</a> • 
  <a href="#tech-stack">Tech Stack</a> • 
@@ -22,12 +21,6 @@
 ## About
 
 This API serves information about a specified location and in a specified language, defaulting to english. It uses a web scraper to search for the weather information based on the parameters entered by the client. The web scraper will search and retrieve the information from the web and give it back to the client in object format.
-
----
-
-## Live version
-
-Access the [live version](#)
 
 ---
 
