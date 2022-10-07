@@ -14,6 +14,8 @@ def scrape(location, lang_code="en"):
 
     soup = BeautifulSoup(page, "html.parser")
     main_container = soup.find("div", id="wob_wc")
+    if not main_container:
+        return None
 
     return {
         **get_current_temp(main_container),
