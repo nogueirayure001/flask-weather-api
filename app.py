@@ -15,11 +15,14 @@ def get_weather():
     lang = request.args.get("lang")
 
     if not location:
-        return jsonify({"message": "invalid location"}), 404
+        return jsonify({"message": "invalid location"}), 400
 
     if not lang:
         data = scraper.scrape(location)
     else:
         data = scraper.scrape(location, lang)
 
-    return jsonify({"message": "success", "data": data})
+    if not data:
+        return jsonify({"message": "No results for the params submitted"}), 404
+
+    return jsonify({"message": "success", "data": data}), 200
