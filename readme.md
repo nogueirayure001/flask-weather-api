@@ -27,7 +27,7 @@ This API serves information about a specified location and in a specified langua
 ## Routes
 
 ```yml
-    GET /weather
+    GET /
     - Route to get weather data from location
     - Query parameters:
         - location: any location by name (required)
