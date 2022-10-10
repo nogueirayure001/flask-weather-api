@@ -54,7 +54,7 @@ This API serves information about a specified location and in a specified langua
 
 ### Pre-requisites
 
-Before you begin, you will need to have [Python](https://www.python.org/) installed on your machine.
+Before you begin, you will need to have [Python](https://www.python.org/) and [chromedriver](https://chromedriver.chromium.org/downloads) installed on your machine.
 
 #### Running the server
 
@@ -71,6 +71,10 @@ $ python3 -m venv venv
 
 # Activate the virtual enviroment
 $ . venv/bin/activate
+
+# Set the environment variables on .env
+# BASE_URL should be https://www.google.com
+# DRIVER_URL should be the path to the chromedriver
 
 # Install the dependencies
 $ pip install -r requirements.txt

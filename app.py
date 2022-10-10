@@ -9,8 +9,8 @@ app = Flask(__name__)
 app.config["JSON_AS_ASCII"] = False
 
 
-@app.get("/weather")
-def get_weather():
+@app.get("/")
+def index():
     location = request.args.get("location")
     lang = request.args.get("lang")
 

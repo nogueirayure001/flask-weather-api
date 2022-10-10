@@ -2,9 +2,9 @@ import os
 from bs4 import BeautifulSoup
 from selenium import webdriver
 
-base_url = os.environ["base_url"]
-driver_path = os.environ["driver_path"]
-driver = webdriver.Chrome(driver_path)
+BASE_URL = os.environ["BASE_URL"]
+DRIVER_PATH = os.environ["DRIVER_PATH"]
+driver = webdriver.Chrome(DRIVER_PATH)
 
 
 def scrape(location, lang_code="en"):
@@ -25,7 +25,7 @@ def scrape(location, lang_code="en"):
 
 
 def create_url(location, lang_code):
-    return f"{base_url}?q=weather+{location}&hl={lang_code}"
+    return f"{BASE_URL}?q=weather+{location}&hl={lang_code}"
 
 
 def get_current_temp(container):
